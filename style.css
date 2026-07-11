@@ -1,14 +1,28 @@
 /* A little polish for the time capsule - added in 2026, a decade into the
    journey. The 2020 HTML underneath is untouched. */
 
+/* Dark by default, matching the rest of bimeshpoudel.com.np; the warm
+   paper look survives for visitors who prefer light mode. */
 :root {
-  --ink: #2b2620;
-  --soft: #6f675c;
-  --line: #e4ddd2;
-  --paper: #faf7f1;
-  --card: #ffffff;
-  --accent: #b3372f;
-  --star: #d9a406;
+  --ink: #e5e7eb;
+  --soft: #9ca3af;
+  --line: #2e303a;
+  --paper: #16171d;
+  --card: #1f2028;
+  --accent: #f87171;
+  --star: #facc15;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --ink: #2b2620;
+    --soft: #6f675c;
+    --line: #e4ddd2;
+    --paper: #faf7f1;
+    --card: #ffffff;
+    --accent: #b3372f;
+    --star: #d9a406;
+  }
 }
 
 * {
