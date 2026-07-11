@@ -1,0 +1,158 @@
+/* A little polish for the time capsule - added in 2026, a decade into the
+   journey. The 2020 HTML underneath is untouched. */
+
+:root {
+  --ink: #2b2620;
+  --soft: #6f675c;
+  --line: #e4ddd2;
+  --paper: #faf7f1;
+  --card: #ffffff;
+  --accent: #b3372f;
+  --star: #d9a406;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  max-width: 720px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.35rem;
+}
+
+h3,
+h4 {
+  font-family: "Courier New", ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin: 2.2rem 0 0.8rem;
+}
+
+p {
+  margin: 0.4rem 0;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 1.8rem 0;
+}
+
+img {
+  max-width: 170px;
+  height: auto;
+  border-radius: 54% 46% 48% 52% / 50% 54% 46% 50%;
+  border: 3px solid var(--line);
+}
+
+table {
+  border-collapse: separate;
+}
+
+th {
+  font-family: "Courier New", ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: var(--soft);
+  text-align: left;
+}
+
+/* skills stars - only the nested skill tables, not the page-layout ones */
+table table td:nth-child(2) {
+  color: var(--star);
+  letter-spacing: 2px;
+}
+
+table table td:first-child {
+  color: var(--ink);
+  font-family: "Courier New", ui-monospace, monospace;
+  font-size: 0.95rem;
+}
+
+ul,
+ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin: 0.35rem 0;
+}
+
+/* contact form */
+form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.5rem;
+  max-width: 480px;
+}
+
+label {
+  display: block;
+  font-family: "Courier New", ui-monospace, monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--soft);
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+input[type="submit"] {
+  font-family: "Courier New", ui-monospace, monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.6rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  filter: brightness(1.1);
+}
