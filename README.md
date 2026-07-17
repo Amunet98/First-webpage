@@ -9,8 +9,9 @@ kept as-is for the memories.
 **Live:** https://amunet98.github.io/First-webpage/
 
 Everything I've built since lives on my portfolio:
-**[bimeshpoudel.com.np](https://www.bimeshpoudel.com.np)** — including a
-real-time [fall detection system](https://www.bimeshpoudel.com.np/human-anomaly-live-demo)
+**[bimeshpoudel.com.np](https://www.bimeshpoudel.com.np)** — including
+[Lekh](https://lekh-gamma.vercel.app), a Nepali typing + OCR + translation
+PWA, a real-time [fall detection system](https://www.bimeshpoudel.com.np/human-anomaly-live-demo),
 and an in-browser [hand gesture recognizer](https://gesture-recognition-ten.vercel.app).
 
 ## Run it
