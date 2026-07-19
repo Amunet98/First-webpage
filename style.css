@@ -13,8 +13,10 @@
   --star: #facc15;
 }
 
+/* Light palette applies automatically when the OS prefers light and the
+   visitor hasn't made an explicit choice (data-theme="dark" overrides it). */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme="dark"]) {
     --ink: #2b2620;
     --soft: #6f675c;
     --line: #e4ddd2;
@@ -23,6 +25,17 @@
     --accent: #b3372f;
     --star: #d9a406;
   }
+}
+
+/* 2026: theme toggle - explicit manual choice wins over the OS either way. */
+:root[data-theme="light"] {
+  --ink: #2b2620;
+  --soft: #6f675c;
+  --line: #e4ddd2;
+  --paper: #faf7f1;
+  --card: #ffffff;
+  --accent: #b3372f;
+  --star: #d9a406;
 }
 
 * {
@@ -168,5 +181,31 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
+  filter: brightness(1.1);
+}
+
+/* 2026: theme toggle */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#theme-toggle:hover {
   filter: brightness(1.1);
 }

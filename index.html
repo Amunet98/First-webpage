@@ -9,8 +9,21 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="stylesheet" href="style.css">
     <title>Bimesh's Personal Site</title>
+    <!-- 2026: theme toggle - apply stored choice before first paint to avoid a flash -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          if (stored === 'light' || stored === 'dark') {
+            document.documentElement.dataset.theme = stored;
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
+    <!-- 2026: theme toggle -->
+    <button id="theme-toggle" type="button" aria-label="Switch to light theme">&#9728;</button>
     <table cellspacing="20">
       <tr>
         <td><img src="Bimesh.resized.jpg" alt="Bimesh's profile picture"></td>
@@ -79,5 +92,32 @@
     </table>
     <hr size="3">
     <a href="contact.html">Link to my contact</a>
+    <!-- 2026: theme toggle -->
+    <script>
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        var stored = null;
+        try {
+          stored = localStorage.getItem('theme');
+        } catch (e) {}
+        var isLight = stored ? stored === 'light' : prefersLight;
+
+        function paint() {
+          btn.innerHTML = isLight ? '&#9789;' : '&#9728;';
+          btn.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+        }
+        paint();
+
+        btn.addEventListener('click', function () {
+          isLight = !isLight;
+          document.documentElement.dataset.theme = isLight ? 'light' : 'dark';
+          try {
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+          } catch (e) {}
+          paint();
+        });
+      })();
+    </script>
     </body>
 </html>
