@@ -12,7 +12,9 @@ Everything I've built since lives on my portfolio:
 **[bimeshpoudel.com.np](https://www.bimeshpoudel.com.np)** — including
 [Lekh](https://lekh-gamma.vercel.app), a Nepali typing + OCR + translation
 PWA, a real-time [fall detection system](https://www.bimeshpoudel.com.np/human-anomaly-live-demo),
-and an in-browser [hand gesture recognizer](https://gesture-recognition-ten.vercel.app).
+an in-browser [hand gesture recognizer](https://gesture-recognition-ten.vercel.app),
+and a [stadium booking system](https://github.com/Amunet98/stadium-booking) I went
+back and rebuilt five years after writing it.
 
 ## Run it
 
@@ -21,3 +23,7 @@ No build step, no dependencies — it's one HTML file:
 ```bash
 open index.html
 ```
+
+---
+
+More of my work: **[bimeshpoudel.com.np](https://www.bimeshpoudel.com.np)**
