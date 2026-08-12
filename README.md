@@ -16,6 +16,22 @@ an in-browser [hand gesture recognizer](https://gesture-recognition-ten.vercel.a
 and a [stadium booking system](https://github.com/Amunet98/stadium-booking) I went
 back and rebuilt five years after writing it.
 
+## Kept as written, with two marked exceptions
+
+The content is the 2021 original. Two things have been corrected in place,
+commented `<!-- 2026: ... -->` where they appear, because leaving them would
+have been misleading rather than nostalgic:
+
+- The contact form posted to `action="mailto:"`, which browsers have since
+  stopped honouring — Chrome and Edge ignore it outright. It is a plain mailto
+  link now; the original fields are kept, disabled, as a record of what it
+  asked for.
+- The bio still said "I am an engineering student at Bangalore". True when
+  written. The line stands, with a dated note under it saying the degree is
+  finished.
+
+(A theme toggle was added the same way, and is marked the same way.)
+
 ## Run it
 
 No build step, no dependencies — it's one HTML file:
