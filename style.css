@@ -42,6 +42,13 @@
   box-sizing: border-box;
 }
 
+html {
+  /* Mobile browsers paint their own translucent gray/black overlay on tap
+     unless told otherwise, which muddies every button's press state
+     regardless of its actual accent color. */
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   margin: 0 auto;
   padding: 3rem 1.5rem 4rem;
