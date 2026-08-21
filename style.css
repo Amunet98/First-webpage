@@ -85,8 +85,13 @@ a {
   text-underline-offset: 3px;
 }
 
-a:hover {
-  text-decoration-thickness: 2px;
+/* Touch has no real hover: without this guard, tapping leaves the link
+   stuck in its :hover state until something else is tapped, because touch
+   browsers apply :hover on tap and never fire a mouseleave to clear it. */
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
 }
 
 hr {
@@ -187,8 +192,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  filter: brightness(1.1);
+@media (hover: hover) and (pointer: fine) {
+  input[type="submit"]:hover {
+    filter: brightness(1.1);
+  }
 }
 
 /* 2026: theme toggle */
@@ -213,6 +220,8 @@ input[type="submit"]:hover {
   z-index: 10;
 }
 
-#theme-toggle:hover {
-  filter: brightness(1.1);
+@media (hover: hover) and (pointer: fine) {
+  #theme-toggle:hover {
+    filter: brightness(1.1);
+  }
 }
